@@ -10,6 +10,8 @@ import {
   GridRowsProp,
   GridColDef,
 } from "@material-ui/data-grid";
+import LandingPage from "../components/LandingPage"
+
 
 const rows: GridRowsProp = [
   {
@@ -59,6 +61,8 @@ const columns: GridColDef[] = [
   { field: "col6", headerName: "Country", width: 150 },
 ];
 function App() {
+
+
   return (
     
     <div>
@@ -68,8 +72,10 @@ function App() {
     <BrowserRouter>
     <Header />
       <Switch>
-        <Route exact="true" path="/" component={() => <div>Home</div>}/>
-        <Route exact="true" path="/table" component={() => <div style={{ height: 400, width: "100%" }}>
+        <Route exact="true" path="/" component={LandingPage}/>
+        <Route exact="true" path="/table" 
+        component={() => 
+        <div style={{ height: 400, width: "100%" }}>
           <DataGrid
             rows={rows}
             columns={columns}

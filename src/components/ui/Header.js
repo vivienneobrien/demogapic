@@ -17,14 +17,8 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
-import {
-  DataGrid,
-  GridToolbar,
-  GridRowsProp,
-  GridColDef,
-} from "@material-ui/data-grid";
 import { Link } from "react-router-dom";
-
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const drawerWidth = 240;
 
@@ -95,10 +89,10 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = () => {
   const classes = useStyles();
+  const theme = useTheme(); // gives us access to our default theme
+  const matches = useMediaQuery(theme.breakpoints.down("md")) // responsiveness - select anything that is medium and below returns true
 
   const [open, setOpen] = React.useState(false);
-
-  const theme = useTheme();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -107,6 +101,7 @@ const Header = () => {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
 
   return (
     <div className={classes.root}>
@@ -180,7 +175,7 @@ const Header = () => {
         })}
       >
         <div className={classes.drawerHeader} />
-
+        
         
       </main>
     </div>
