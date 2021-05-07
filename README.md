@@ -25,7 +25,6 @@ This project was built so that users can analyse data related to a certain demog
 - npm install @material-ui/data-grid
 - npm install --save react-lottie (Allows us to use animations on our page)
 
-
 ## Dependencies
 - React 
 - React-Dom
