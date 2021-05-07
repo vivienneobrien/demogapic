@@ -9,7 +9,6 @@ function App() {
   return (
     <div>
      <Header />
-     <h1>Hi</h1>
     </div>
   ); 
 }
