@@ -18,6 +18,12 @@ This project was built to consolidate my knowledge of React.js by using props, c
 - npm install node.js
 - npm start
 
+## Environment Setup Pre Project Building
+- npx create-react-app
+- npm install --save react-router-dom
+- npm install --save @material-ui/core
+- npm install --save material-ui-icons (Caught me by surpirse: Needed to use the <MenuIcon />)
+
 ## Dependencies
 - React 
 - React-Dom
