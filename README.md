@@ -23,6 +23,7 @@ This project was built to consolidate my knowledge of React.js by using props, c
 - npm install --save react-router-dom
 - npm install --save @material-ui/core
 - npm install --save material-ui-icons (Caught me by surpirse: Needed to use the <MenuIcon />)
+- Build failed after first commit, heroku said to git rm yarn.lock and rm package-lock.json from project for the build to succeed
 
 ## Dependencies
 - React 
