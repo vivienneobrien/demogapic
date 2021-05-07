@@ -15,8 +15,8 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
+import HomeIcon from '@material-ui/icons/Home';
+import TableChartIcon from '@material-ui/icons/TableChart';
 import { Link } from "react-router-dom";
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
@@ -155,13 +155,13 @@ const Header = () => {
         <List>
         <ListItem button component={Link} to="/">
           <ListItemIcon>
-            <InboxIcon />
+            <HomeIcon />
           </ListItemIcon>
           <ListItemText primary="Home" />
         </ListItem>
         <ListItem button component={Link} to="/table">
           <ListItemIcon>
-            <MailIcon />
+            <TableChartIcon />
           </ListItemIcon>
           <ListItemText primary="Table" />
         </ListItem>
