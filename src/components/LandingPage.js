@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import animationData from "../animations/landinganimation/data";
+import animationData from "../animations/landinganimation/22807-people-morph-flow.json";
 import { makeStyles } from "@material-ui/styles";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
@@ -10,14 +10,15 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    marginTop: "5em",
+    marginTop: "2em",
     marginLeft: "5em",
   },
   animation: {
     maxWidth: "50em",
     minWidth: "21em",
-    marginTop: "2em",
-    marginLeft: "10%",
+    marginTop: "1em",
+    marginLeft: "5%",
+    marginRight: "15%"
   },
   tableButton: {
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
