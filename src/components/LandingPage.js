@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     height: 48,
     padding: "0 30px",
-    margin: "3em",
+    marginTop: "2em",
   },
 }));
 
@@ -47,21 +47,17 @@ const LandingPage = () => {
         <Grid container justify="flex-end" alignItems="center" direction="row">
           <Grid sm item>
             <Typography variant="h2" align="left">
-              Demogapics is bridging the gap
-              {/* Demogapics allows for easy access to data to view the inequality
-              <br /> among certain demographics at a global scale */}
+              DEMOGAPIC <br /> 
+              - Bridging the gap.
             </Typography>
             <Typography variant="subtitle1" align="left">
-              Demogapics allows for easy access to data to view the inequality
-              <br /> among certain demographics at a global scale
+              Demogapic allows easy access to data so that users can view 
+              <br /> the inequality among certain demographics at a global scale 
+              <br /> and make change based on the metrics provided.
             </Typography>
-            <Grid container justify="center">
-              <Grid item>
-                <Button className={classes.tableButton} variant="contained" component={Link} to="/table">
+            <Button className={classes.tableButton} variant="contained" component={Link} to="/table">
                   Table
                 </Button>
-              </Grid>
-            </Grid>
           </Grid>
           <Grid sm item className={classes.animation}>
             <Lottie options={defaultOptions} height={"100%"} width={"100%"} />

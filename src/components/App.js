@@ -51,6 +51,15 @@ const rows: GridRowsProp = [
     col5: "Senior Engineer",
     col6: "Ireland",
   },
+  {
+    id: 5,
+    col1: "River Raymond",
+    col2: "81",
+    col3: "Male",
+    col4: "Retired",
+    col5: "Doctor",
+    col6: "India",
+  },
 ];
 
 const columns: GridColDef[] = [
@@ -76,7 +85,7 @@ function App() {
         <Route exact="true" path="/" component={LandingPage}/>
         <Route exact="true" path="/table" 
         component={() => 
-        <div style={{ height: 300, width: "80%", margin: "10rem", marginTop: "5rem"}}>
+        <div style={{ height: 350, width: "80%", margin: "10rem", marginTop: "5rem"}}>
           <DataGrid
             rows={rows}
             columns={columns}
