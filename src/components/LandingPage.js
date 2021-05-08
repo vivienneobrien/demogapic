@@ -49,12 +49,12 @@ const LandingPage = () => {
           <Grid sm item>
             <Typography variant="h2" align="left">
               DEMOGAPIC <br /> 
-              - Bridging the gap.
+              Evidence. Insight. Impact.
             </Typography>
             <Typography variant="subtitle1" align="left">
               Demogapic allows easy access to data so that users can view 
               <br /> the inequality among certain demographics at a global scale 
-              <br /> and make change based on the metrics provided.
+              <br /> and make positive change based on the metrics provided.
             </Typography>
             <Button className={classes.tableButton} variant="contained" component={Link} to="/table">
                   Table

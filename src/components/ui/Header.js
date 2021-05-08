@@ -127,7 +127,7 @@ const Header = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Demogapics
+            Demogapic
           </Typography>
         </Toolbar>
       </AppBar>
