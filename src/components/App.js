@@ -13,6 +13,7 @@ import {
 import LandingPage from "../components/LandingPage"
 
 
+
 const rows: GridRowsProp = [
   {
     id: 1,
@@ -36,7 +37,7 @@ const rows: GridRowsProp = [
     id: 3,
     col1: "Sarah McAskill",
     col2: "60",
-    col3: "Female",
+    col3: "Non-Binary",
     col4: "Mid-Level",
     col5: "Shop Assistant",
     col6: "France",
@@ -45,7 +46,7 @@ const rows: GridRowsProp = [
     id: 4,
     col1: "Jim Brown",
     col2: "45",
-    col3: "Male",
+    col3: "Other",
     col4: "Manager",
     col5: "Senior Engineer",
     col6: "Ireland",
@@ -75,7 +76,7 @@ function App() {
         <Route exact="true" path="/" component={LandingPage}/>
         <Route exact="true" path="/table" 
         component={() => 
-        <div style={{ height: 300, width: "80%", margin: "10rem"}}>
+        <div style={{ height: 300, width: "80%", margin: "10rem", marginTop: "5rem"}}>
           <DataGrid
             rows={rows}
             columns={columns}
