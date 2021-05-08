@@ -22,13 +22,15 @@ const LandingPage = () => {
     <Grid container direction="column">
       <Grid item>
         <Grid container justify="flex-end" alignItems="center" direction="row">
-          <Grid item>
+          <Grid sm item>
             <Typography variant="h2" align="left">
-              Demogapics is bridging the 
-              <br /> gap between minority groups
+              Demogapics is bridging the gaps
+              <br /> between minority groups
+              {/* Demogapics allows for easy access to data to view the inequality
+              <br /> among certain demographics at a global scale */}
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid sm item>
             <Lottie options={defaultOptions} height={"100%"} width={"100%"} />
           </Grid>
         </Grid>

@@ -17,6 +17,14 @@ const theme = createMuiTheme ({
           secondary: {
               main: `${orange}`
           }
+      },
+      typography: {
+          h2: {
+              fontWeight: 700,
+              fontSize: "2.5rem",
+              color: `${blue}`,
+              lineHeight: 1.5
+          }
       }
     })
     export default theme
