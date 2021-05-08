@@ -75,7 +75,7 @@ function App() {
         <Route exact="true" path="/" component={LandingPage}/>
         <Route exact="true" path="/table" 
         component={() => 
-        <div style={{ height: 400, width: "100%" }}>
+        <div style={{ height: 300, width: "80%", margin: "10rem"}}>
           <DataGrid
             rows={rows}
             columns={columns}

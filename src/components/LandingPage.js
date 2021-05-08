@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     height: 48,
     padding: "0 30px",
-    margin: "3em"
-  }
+    margin: "3em",
+  },
 }));
 
 const LandingPage = () => {
@@ -50,8 +50,8 @@ const LandingPage = () => {
               <br /> among certain demographics at a global scale */}
             </Typography>
             <Typography variant="subtitle1" align="left">
-            Demogapics allows for easy access to data to view the inequality
-            <br /> among certain demographics at a global scale 
+              Demogapics allows for easy access to data to view the inequality
+              <br /> among certain demographics at a global scale
             </Typography>
             <Grid container justify="center">
               <Grid item>
