@@ -24,7 +24,7 @@ const theme = createMuiTheme ({
               fontSize: "2.5rem",
               color: `${blue}`,
               lineHeight: 1.5
-          }
+          },
       }
     })
     export default theme
