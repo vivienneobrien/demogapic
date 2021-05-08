@@ -25,6 +25,9 @@ const theme = createMuiTheme ({
               color: `${blue}`,
               lineHeight: 1.5
           },
+          subtitle1: {
+            color: `${blue}`
+          }
       }
     })
     export default theme
