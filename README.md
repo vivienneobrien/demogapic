@@ -14,17 +14,13 @@ This project was built so that users can analyse data related to a certain demog
 - npm install node.js
 - npm start
 
-## Environment Setup Pre Project Building
+## Environment Setup Pre Project Building/ Dependencies
 - npx create-react-app
-- npm install --save react-router-dom
-- npm install --save @material-ui/core
+- npm install --save react-router-dom (Navigation)
+- npm install --save @material-ui/core (Access to all MUI components and functionality)
 - npm install @material-ui-styles (JSS - Allows us to customise the material-ui theme- ThemeProvider)
-- npm install --save material-ui-icons (Caught me by surpirse: Needed to use the <MenuIcon />)
-- Build failed after first commit, heroku said to git rm yarn.lock and rm package-lock.json from project for the build to succeed
-- npm install @material-ui/data-grid
+- npm install --save material-ui-icons (Caught me by surpirse: Needed to use the MUI icons)
+- Build failed after first commit, heroku said to git rm yarn.lock and rm package-lock.json from project for the build to succeed - Needed to retrieve package-lock later on.
+- npm install @material-ui/data-grid (Needed to use datagrid to view data and filter)
 - npm install --save react-lottie (Allows us to use animations on our page)
-- npm install serve --s (Heroku)
-
-## Dependencies
-- React 
-- React-Dom
+- npm install serve --s (Needed to install for Heroku build to work)

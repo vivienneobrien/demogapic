@@ -33,7 +33,7 @@ const LandingPage = () => {
   return (
     <Container maxWidth="lg">
     <Grid container direction="column"> 
-        <Grid container direction="row" justify="center" alignItems="center" style={{minHeight:"100vh"}}>
+        <Grid container direction="row" justify="center" alignItems="center" style={{minHeight:"100vh", padding: "3em"}}>
           <Grid xs={12} md={6} item>
             <Typography variant="h2" align="left">
               Evidence. Insight. Impact.
@@ -48,7 +48,7 @@ const LandingPage = () => {
                 </Button>
           </Grid>
           <Grid className={classes.lottieContainer} xs={12} md={6} item>
-            {matches?  <Lottie options={defaultOptions} height={"600px"} width={"600px"} />:  <Lottie options={defaultOptions} height={"300px"} width={"300px"} />}
+            {matches?  <Lottie options={defaultOptions} height={"500px"} width={"500px"} />:  <Lottie options={defaultOptions} height={"300px"} width={"300px"} />}
           </Grid>
         </Grid>
       </Grid>
