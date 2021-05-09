@@ -1,24 +1,27 @@
 import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import {
+  AppBar,
+  Toolbar,
+  Drawer,
+  Divider,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  IconButton,
+  Typography,
+  CssBaseline,
+} from "@material-ui/core";
+import { makeStyles, useTheme, theme } from "@material-ui/core/styles";
 import clsx from "clsx";
-import { Menu as MenuIcon } from "@material-ui/icons";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Drawer from "@material-ui/core/Drawer";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import Divider from "@material-ui/core/Divider";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import HomeIcon from '@material-ui/icons/Home';
-import TableChartIcon from '@material-ui/icons/TableChart';
+import {
+  Menu as MenuIcon,
+  ChevronLeft as ChevronLeftIcon,
+  ChevronRight as ChevronRightIcon,
+  Home as HomeIcon,
+  TableChart as TableChartIcon,
+} from "@material-ui/icons";
 import { Link } from "react-router-dom";
-import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const drawerWidth = 240;
 
@@ -40,12 +43,6 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
-  // toolbarMargin: {
-  //   ...theme.mixins.toolbar
-  // },
-  // customizeToolbar: {
-  //   minHeight: 100
-  // },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -85,12 +82,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-
 const Header = () => {
   const classes = useStyles();
   const theme = useTheme(); // gives us access to our default theme
-  const matches = useMediaQuery(theme.breakpoints.down("md")) // responsiveness - select anything that is medium and below returns true
 
   const [open, setOpen] = React.useState(false);
 
@@ -102,11 +96,10 @@ const Header = () => {
     setOpen(false);
   };
 
-
   return (
     <div className={classes.root}>
       <CssBaseline />
-{/* <React.Fragment> */}
+      {/* <React.Fragment> */}
       <AppBar
         position="fixed" // if we changed this to static- not good
         style={{ background: theme.palette.primary.mainGradient }}
@@ -114,9 +107,9 @@ const Header = () => {
           [classes.appBarShift]: open,
         })}
       >
-      {/* Tool bar helps us lay everything out in a horizontal manor 
+        {/* Tool bar helps us lay everything out in a horizontal manor 
       if we didnt have this it would start adding vertically */}
-        <Toolbar className={classes.customizeToolbar}> 
+        <Toolbar className={classes.customizeToolbar}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -131,8 +124,6 @@ const Header = () => {
           </Typography>
         </Toolbar>
       </AppBar>
-      {/* <div className={classes.toolBarMargin}/>
-</React.Fragment> */}
       <Drawer
         className={classes.drawer}
         variant="persistent"
@@ -153,30 +144,29 @@ const Header = () => {
         </div>
         <Divider />
         <List>
-        <ListItem button component={Link} to="/">
-          <ListItemIcon>
-            <HomeIcon />
-          </ListItemIcon>
-          <ListItemText primary="Home" />
-        </ListItem>
-        <ListItem button component={Link} to="/table">
-          <ListItemIcon>
-            <TableChartIcon />
-          </ListItemIcon>
-          <ListItemText primary="Table" />
-        </ListItem>
+          <ListItem button component={Link} to="/">
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItem>
+          <ListItem button component={Link} to="/table">
+            <ListItemIcon>
+              <TableChartIcon />
+            </ListItemIcon>
+            <ListItemText primary="Table" />
+          </ListItem>
         </List>
         <Divider />
       </Drawer>
 
       <main
         className={clsx(classes.content, {
+          // clsx applying classes if boolean is
           [classes.contentShift]: open,
         })}
       >
         <div className={classes.drawerHeader} />
-        
-        
       </main>
     </div>
   );
