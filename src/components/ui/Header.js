@@ -12,8 +12,6 @@ import {
   Typography,
   CssBaseline,
 } from "@material-ui/core";
-import { makeStyles, useTheme, theme } from "@material-ui/core/styles";
-import clsx from "clsx";
 import {
   Menu as MenuIcon,
   ChevronLeft as ChevronLeftIcon,
@@ -21,6 +19,8 @@ import {
   Home as HomeIcon,
   TableChart as TableChartIcon,
 } from "@material-ui/icons";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import clsx from "clsx";
 import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
@@ -84,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = () => {
   const classes = useStyles();
-  const theme = useTheme(); // gives us access to our default theme
+  const theme = useTheme();
 
   const [open, setOpen] = React.useState(false);
 
@@ -99,16 +99,14 @@ const Header = () => {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      {/* <React.Fragment> */}
+
       <AppBar
-        position="fixed" // if we changed this to static- not good
+        position="fixed"
         style={{ background: theme.palette.primary.mainGradient }}
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
       >
-        {/* Tool bar helps us lay everything out in a horizontal manor 
-      if we didnt have this it would start adding vertically */}
         <Toolbar className={classes.customizeToolbar}>
           <IconButton
             color="inherit"
@@ -124,6 +122,7 @@ const Header = () => {
           </Typography>
         </Toolbar>
       </AppBar>
+
       <Drawer
         className={classes.drawer}
         variant="persistent"
@@ -162,7 +161,6 @@ const Header = () => {
 
       <main
         className={clsx(classes.content, {
-          // clsx applying classes if boolean is
           [classes.contentShift]: open,
         })}
       >

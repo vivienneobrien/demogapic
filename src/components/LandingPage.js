@@ -1,11 +1,11 @@
 import React from "react";
 import Lottie from "react-lottie";
 import animationData from "../animations/landinganimation/22807-people-morph-flow.json";
-import { makeStyles, useTheme} from "@material-ui/styles";
+import { makeStyles } from "@material-ui/styles";
 import { Link } from "react-router-dom";
-import {Typography, Button, Grid, Container, Box, useMediaQuery} from "@material-ui/core" 
+import {Typography, Button, Grid, Container, useMediaQuery} from "@material-ui/core" 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   tableButton: {
     background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
     border: 0,
@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
 
 const LandingPage = () => {
   const classes = useStyles();
+  const matches = useMediaQuery('(min-width:600px)');
 
   const defaultOptions = {
     loop: true,
@@ -32,10 +33,7 @@ const LandingPage = () => {
   return (
     <Container maxWidth="lg">
     <Grid container direction="column"> 
-    {/* column stacks as column */}
         <Grid container direction="row" justify="center" alignItems="center" style={{minHeight:"100vh"}}>
-        {/* Row axis is horizontal because its a row, push to end of container, 
-        alignItems aligning everything vertically  */}
           <Grid xs={12} md={6} item>
             <Typography variant="h2" align="left">
               Evidence. Insight. Impact.
@@ -49,8 +47,8 @@ const LandingPage = () => {
                   Table
                 </Button>
           </Grid>
-          <Grid xs={12} md={6} item className={classes.lottieContainer}>
-            <Lottie options={defaultOptions} height={"300px"} width={"300px"} />
+          <Grid className={classes.lottieContainer} xs={12} md={6} item>
+            {matches?  <Lottie options={defaultOptions} height={"600px"} width={"600px"} />:  <Lottie options={defaultOptions} height={"300px"} width={"300px"} />}
           </Grid>
         </Grid>
       </Grid>

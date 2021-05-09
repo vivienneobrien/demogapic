@@ -1,6 +1,5 @@
 import { DataGrid, GridToolbar } from "@material-ui/data-grid";
-import { makeStyles, useTheme } from "@material-ui/styles";
-import { Grid, Container, Box } from "@material-ui/core"; //gods for layout
+import { Container } from "@material-ui/core"; 
 
 const rows = [
   {
