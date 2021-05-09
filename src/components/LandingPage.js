@@ -48,7 +48,6 @@ const LandingPage = () => {
         <Grid container justify="flex-end" alignItems="center" direction="row">
           <Grid sm item>
             <Typography variant="h2" align="left">
-              DEMOGAPIC <br /> 
               Evidence. Insight. Impact.
             </Typography>
             <Typography variant="subtitle1" align="left">
