@@ -10,7 +10,7 @@ This project was built so that users can analyse data related to a certain demog
 ## Features
 - A user can filter through data i.e. name, age, gender, country, job title and senioritiy.
 - A user can view the screen easily on mobile, tablet and laptop with ease.
-- A user can easily navigate to each web page easily.
+- A user can navigate to each web page easily.
 - A user can download the table as a csv file
 
 ## Running the project
